@@ -3,5 +3,11 @@
         <file>main.qml</file>
         <file>Background.qml</file>
         <file>assets/background/scrollingBackground.png</file>
+        <file>Player.qml</file>
+        <file>assets/Person/bird.png</file>
+        <file>Obstacle.qml</file>
+        <file>assets/background/ground.png</file>
+        <file>assets/Obstacles/rocket.png</file>
+        <file>assets/Person/deadbird.png</file>
     </qresource>
 </RCC>

@@ -1,28 +1,31 @@
 import QtQuick 2.0
 
-Rectangle {
-    anchors.fill: parent
-    Image {
-        id: background
-        source: "assets/background/scrollingBackground.png"
-        fillMode: Image.TileHorizontally
+Image {
+    id: background
+    source: "assets/background/scrollingBackground.png"
+    width: 1600
+    height: 600
+    fillMode: Image.TileHorizontally
 
-        Timer {
-            id: backgroundAnim
-            interval: 100
-            repeat: true
-            running: true
+    function stop() {
+       backgroundAnim.stop()
+       player.state = "Death"
 
-            onTriggered: {
-                background.x -= 5
-                background.width += 5
-            }
+    }
+
+    Timer {
+        id: backgroundAnim
+        interval: 1000/60
+        repeat: true
+        running: true
+
+        onTriggered: {
+            background.x -= 5
+            background.width += 5
         }
     }
-        NumberAnimation on x {
-            to: -background.width
-        }
-        }
+}
+
 
 
 
